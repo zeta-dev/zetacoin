@@ -15,7 +15,7 @@
         <translation>&lt;b&gt;Zetacoin&lt;/b&gt; version</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+73"/>
         <source>
 This is experimental software.
 
@@ -31,11 +31,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="+14"/>
+        <location line="+1"/>
         <source>Copyright</source>
         <translation>Copyright</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-1"/>
+        <source>The Bitcoin developers</source>
+        <translation>The Bitcoin developers</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The Zetacoin developers</source>
         <translation>The Zetacoin developers</translation>
     </message>
@@ -689,7 +695,7 @@ Address: %4
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+109"/>
+        <location filename="../bitcoin.cpp" line="+111"/>
         <source>A fatal error occurred. Zetacoin can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Zetacoin can no longer continue safely and will quit.</translation>
     </message>
@@ -771,15 +777,38 @@ Address: %4
     </message>
 </context>
 <context>
+    <name>FreespaceChecker</name>
+    <message>
+        <location filename="../intro.cpp" line="+60"/>
+        <source>A new data directory will be created.</source>
+        <translation>A new data directory will be created.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Directory already exists. Add &lt;code&gt;%1name&lt;/code&gt; if you intend to create a new directory here.</source>
+        <translation>Directory already exists. Add &lt;code&gt;%1name&lt;/code&gt; if you intend to create a new directory here.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Path already exists, and is not a directory.</source>
+        <translation>Path already exists, and is not a directory.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Cannot create data directory here.</source>
+        <translation>Cannot create data directory here.</translation>
+    </message>
+</context>
+<context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
         <location filename="../guiutil.cpp" line="+493"/>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Zetacoin-Qt</source>
         <translation>Zetacoin-Qt</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-13"/>
         <source>version</source>
         <translation>version</translation>
     </message>
@@ -812,6 +841,59 @@ Address: %4
         <location line="+1"/>
         <source>Show splash screen on startup (default: 1)</source>
         <translation>Show splash screen on startup (default: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Choose data directory on startup (default: 0)</source>
+        <translation>Choose data directory on startup (default: 0)</translation>
+    </message>
+</context>
+<context>
+    <name>Intro</name>
+    <message>
+        <location filename="../forms/intro.ui" line="+14"/>
+        <source>Welcome</source>
+        <translation>Welcome</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Welcome to Zetacoin-Qt.</source>
+        <translation>Welcome to Zetacoin-Qt.</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>As this is the first time the program is launched, you can choose where Zetacoin-Qt will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where Zetacoin-Qt will store its data.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Zetacoin-Qt will download and store a copy of the Zetacoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Zetacoin-Qt will download and store a copy of the Zetacoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Use the default data directory</source>
+        <translation>Use the default data directory</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Use a custom data directory:</source>
+        <translation>Use a custom data directory:</translation>
+    </message>
+    <message>
+        <location filename="../intro.cpp" line="+100"/>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>GB of free space available</source>
+        <translation>GB of free space available</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>(of %1GB needed)</source>
+        <translation>(of %1GB needed)</translation>
     </message>
 </context>
 <context>
@@ -1033,12 +1115,12 @@ Address: %4
     </message>
     <message>
         <location line="+50"/>
-        <location line="+202"/>
+        <location line="+360"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Zetacoin network after a connection is established, but this process has not completed yet.</source>
         <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Zetacoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
-        <location line="-131"/>
+        <location line="-289"/>
         <source>Unconfirmed:</source>
         <translation>Unconfirmed:</translation>
     </message>
@@ -1073,7 +1155,7 @@ Address: %4
         <translation>Mined balance that has not yet matured</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Total:</source>
         <translation>Total:</translation>
     </message>
@@ -1083,7 +1165,27 @@ Address: %4
         <translation>Your current total balance</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+48"/>
+        <source>Information</source>
+        <translation type="unfinished">Informations</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Difficulty:</source>
+        <translation>Difficulty:</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Block:</source>
+        <translation>Block:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Connection:</source>
+        <translation>Connection:</translation>
+    </message>
+    <message>
+        <location line="+59"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Recent transactions&lt;/b&gt;</translation>
     </message>
@@ -1097,9 +1199,32 @@ Address: %4
 <context>
     <name>PaymentServer</name>
     <message>
-        <location filename="../paymentserver.cpp" line="+109"/>
         <source>Cannot start zetacoin: click-to-pay handler</source>
+        <translation type="obsolete">Cannot start zetacoin: click-to-pay handler</translation>
+    </message>
+    <message>
+        <location filename="../paymentserver.cpp" line="+109"/>
+        <source>Cannot start bitcoin: click-to-pay handler</source>
         <translation>Cannot start zetacoin: click-to-pay handler</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../bitcoin.cpp" line="+92"/>
+        <location filename="../intro.cpp" line="-32"/>
+        <source>Zetacoin</source>
+        <translation>Zetacoin</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
+        <translation>Error: Specified data directory &quot;%1&quot; does not exist.</translation>
+    </message>
+    <message>
+        <location filename="../intro.cpp" line="+1"/>
+        <source>Error: Specified data directory &quot;%1&quot; can not be created.</source>
+        <translation>Error: Specified data directory &quot;%1&quot; can not be created.</translation>
     </message>
 </context>
 <context>
@@ -1678,7 +1803,12 @@ Address: %4
 <context>
     <name>SplashScreen</name>
     <message>
-        <location filename="../splashscreen.cpp" line="+25"/>
+        <location filename="../splashscreen.cpp" line="+24"/>
+        <source>The Bitcoin developers</source>
+        <translation>The Bitcoin developers</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The Zetacoin developers</source>
         <translation>The Zetacoin developers</translation>
     </message>

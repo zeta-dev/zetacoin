@@ -10,8 +10,13 @@
 #include "guiutil.h"
 #include "guiconstants.h"
 
+#include "bitcoinrpc.h"
+#include "net.h"
+
 #include <QAbstractItemDelegate>
 #include <QPainter>
+
+using namespace json_spirit;
 
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 3
@@ -118,6 +123,8 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+
+    updateInformation();
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
@@ -211,4 +218,23 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+void OverviewPage::updateInformation()
+{
+    QString difficulty;
+    difficulty.setNum(GetDifficulty(),'g',10);
+    ui->labelDifficulty->setText(difficulty);
+    QString block;
+    block.setNum(nBestHeight);
+    ui->labelBlock->setText(block);
+    QString conn;
+    conn.setNum((int)vNodes.size());
+    ui->labelConnection->setText(conn);
+
+}
+
+void OverviewPage::on_updateButton_clicked()
+{
+    updateInformation();
 }
