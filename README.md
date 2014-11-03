@@ -1,11 +1,11 @@
-Zetacoin integration/staging tree
-=================================
+Zetacoin Core integration/staging tree
+=====================================
 
 http://www.zeta-coin.org
 
 https://bitcointalk.org/index.php?topic=267545.0
 
-Copyright (c) 2009-2013 Bitcoin Developers
+Copyright (c) 2009-2014 Bitcoin Core Developers
 
 Copyright (c) 2013-2014 Zetacoin Developers
 
@@ -73,6 +73,18 @@ for the build/test scripts.
 Large changes should have a test plan, and should be tested by somebody other
 than the developer who wrote the code.
 See https://github.com/bitcoin/QA/ for how to create a test plan.
+
+Translations
+------------
+
+Changes to translations as well as new translations can be submitted to
+[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+
+Periodically the translations are pulled from Transifex and merged into the git repository. See the
+[translation process](doc/translation_process.md) for details on how this works.
+
+**Important**: We do not accept translation changes as github pull request because the next
+pull from Transifex would automatically overwrite them again.
 
 Development tips and tricks
 ---------------------------
