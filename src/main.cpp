@@ -1216,16 +1216,18 @@ static const int64_t nMinSubsidy = 1 * COIN;
 int64_t GetBlockValue(int nHeight, int64_t nFees)
 {
     int64_t nSubsidy = nStartSubsidy;
-
-    // Mining phase: Subsidy is cut in half every SubsidyHalvingInterval
-    nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
+    int nHalvings = nHeight / Params().SubsidyHalvingInterval();
     
-    // Inflation phase: Subsidy reaches minimum subsidy
-    // Network is rewarded for transaction processing with transaction fees and 
-    // the inflationary subsidy
-    if (nSubsidy < nMinSubsidy)
+    // There should be only 10 halvings before inflation phase is reached
+    if (nHalvings >= 10)
     {
+        // Inflation phase: Subsidy reaches minimum subsidy
+        // Network is rewarded for transaction processing with transaction fees and 
+        // the inflationary subsidy
         nSubsidy = nMinSubsidy;
+    } else {
+        // Mining phase: Subsidy is cut in half every SubsidyHalvingInterval
+        nSubsidy >>= nHalvings;
     }
 
     return nSubsidy + nFees;
